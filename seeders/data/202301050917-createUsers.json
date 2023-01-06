@@ -1,0 +1,37 @@
+[
+    {
+       "id": "bJ9VI4e1E",
+       "name": "Eduardo Martínez",
+       "email": "eduardom362@gmail.com",
+       "password": "$2b$10$kCRlxCHHLG9S6A7m3VUsJOq.ZsIg5lTTjPj9KqoDwFDps77ZirgM6",
+       "deleted": 0
+    },
+    {
+        "id": "jeLnETWHu",
+        "name": "Eduardo Testing",
+        "email": "eduardotesting@gmail.com",
+        "password": "$2b$10$kCRlxCHHLG9S6A7m3VUsJOq.ZsIg5lTTjPj9KqoDwFDps77ZirgM6",
+        "deleted": 0
+    },
+    {
+        "id": "00PIba3sE",
+        "name": "Eduardo Borrado",
+        "email": "eduardoborrado@gmail.com",
+        "password": "$2b$10$kCRlxCHHLG9S6A7m3VUsJOq.ZsIg5lTTjPj9KqoDwFDps77ZirgM6",
+        "deleted": 1
+    },
+    {
+        "id": "3dnaNAn230",
+        "name": "Eduardo Sin Permiso Admin",
+        "email": "eduardosinpermiso@gmail.com",
+        "password": "$2b$10$kCRlxCHHLG9S6A7m3VUsJOq.ZsIg5lTTjPj9KqoDwFDps77ZirgM6",
+        "deleted": 0
+    },
+    {
+        "id": "-lZv_9ov7",
+        "name": "Eduardo Solo Usuario",
+        "email": "eduardosolousuario@gmail.com",
+        "password": "$2b$10$kCRlxCHHLG9S6A7m3VUsJOq.ZsIg5lTTjPj9KqoDwFDps77ZirgM6",
+        "deleted": 0
+    }
+]

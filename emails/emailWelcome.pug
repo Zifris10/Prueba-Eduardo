@@ -1,0 +1,22 @@
+html(lang='es')
+    head
+        meta(charset='utf-8')      
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title Bienvenido
+        style
+            include ./style.css
+    body.bg-blue
+        br
+        br
+        .bg-blanco.ps-15.pe-15.margin-email
+            include ./header
+            .row.mb-25
+                .col-12.text-center
+                    p.font-20.fw-bold
+                        | ¡Hola, #{name}!
+                    p.font-16
+                        | Gracias por visitar la página de SIMDATAGROUP.
+                    br
+                    br
+        include ./footer
+        br

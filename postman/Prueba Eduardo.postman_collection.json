@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "18c3a6af-97e9-41f8-bc97-a0dd0158133e",
+		"name": "Prueba Eduardo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8524578"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    var jsonData = pm.response.json();",
+									"    pm.globals.set(\"tokenPruebaEduardo\", jsonData.data);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"eduardom362@gmail.com\",\n    \"password\": \"hola123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/admins",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"eduardosolousuario@gmail.com\",\n    \"password\": \"hola123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inquiry",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Abrir aqui\",\n    \"questions\": [\n        {\n            \"question\": \"¿Cómo calificas la limpieza?\",\n            \"responses\": [\n                {\n                    \"title\": \"Buena\",\n                    \"descripcion\": \"El puntaje de una afirmación es 10\",\n                    \"points\": 10\n                },\n                {\n                    \"title\": \"Media\",\n                    \"descripcion\": \"El puntaje de una afirmación es 6\",\n                    \"points\": 6\n                },\n                {\n                    \"title\": \"Mala\",\n                    \"descripcion\": \"El puntaje de una afirmación es 1\",\n                    \"points\": 1\n                }\n            ]\n        },\n        {\n            \"question\": \"¿Cómo calificas la comida?\",\n            \"responses\": [\n                {\n                    \"title\": \"Buena\",\n                    \"descripcion\": \"El puntaje de una afirmación es 10\",\n                    \"points\": 10\n                },\n                {\n                    \"title\": \"Mala\",\n                    \"descripcion\": \"El puntaje de una afirmación es 1\",\n                    \"points\": 1\n                }\n            ]\n        },\n        {\n            \"question\": \"¿Cómo calificas el servicio?\",\n            \"responses\": [\n                {\n                    \"title\": \"Buena\",\n                    \"descripcion\": \"El puntaje de una afirmación es 10\",\n                    \"points\": 10\n                },\n                {\n                    \"title\": \"Media\",\n                    \"descripcion\": \"El puntaje de una afirmación es 6\",\n                    \"points\": 6\n                }\n            ]\n        },\n        {\n            \"question\": \"¿Cómo calificas el internet?\",\n            \"responses\": [\n                {\n                    \"title\": \"Buena\",\n                    \"descripcion\": \"El puntaje de una afirmación es 10\",\n                    \"points\": 10\n                },\n                {\n                    \"title\": \"Media\",\n                    \"descripcion\": \"El puntaje de una afirmación es 6\",\n                    \"points\": 6\n                },\n                {\n                    \"title\": \"Mala\",\n                    \"descripcion\": \"El puntaje de una afirmación es 1\",\n                    \"points\": 1\n                }\n            ]\n        },\n        {\n            \"question\": \"¿Cómo calificas la lavadora?\",\n            \"responses\": [\n                {\n                    \"title\": \"Buena\",\n                    \"descripcion\": \"El puntaje de una afirmación es 10\",\n                    \"points\": 10\n                },\n                {\n                    \"title\": \"Media\",\n                    \"descripcion\": \"El puntaje de una afirmación es 6\",\n                    \"points\": 6\n                },\n                {\n                    \"title\": \"Mala\",\n                    \"descripcion\": \"El puntaje de una afirmación es 1\",\n                    \"points\": 1\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/inquirys/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"inquirys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{tokenPruebaEduardo}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/inquirys/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"inquirys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/inquirys/:inquiryId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"inquirys",
+								":inquiryId"
+							],
+							"variable": [
+								{
+									"key": "inquiryId",
+									"value": "NRusSiTglf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/inquirys/:inquiryId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"inquirys",
+								":inquiryId"
+							],
+							"variable": [
+								{
+									"key": "inquiryId",
+									"value": "DmDlig8y2b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nueva encuesta\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/inquirys/:inquiryId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"inquirys",
+								":inquiryId"
+							],
+							"variable": [
+								{
+									"key": "inquiryId",
+									"value": "tjPJ7CwkWh"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Update Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"question\": \"Nueva encuesta\",\n    \"responses\": [\n        {\n            \"title\": \"Buena\",\n            \"descripcion\": \"El puntaje de una afirmación es 10\",\n            \"points\": 11\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/questions/:questionId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"questions",
+								":questionId"
+							],
+							"variable": [
+								{
+									"key": "questionId",
+									"value": "fG4vUE3db"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

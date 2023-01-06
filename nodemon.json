@@ -1,0 +1,14 @@
+{
+    "watch": [
+        "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+        "emails/*",
+        "migrations/*",
+        "node_modules/*",
+        "seeders/*",
+        "test/*"
+    ],
+    "exec": "ts-node ./src/server.ts"
+}
